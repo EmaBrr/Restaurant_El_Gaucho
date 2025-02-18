@@ -1,0 +1,114 @@
+.swiper {
+  position: relative;
+  width: 90%;
+  max-width: 800px; // Adjust width for larger screens
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+
+}
+
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  padding-bottom: 30px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.swiper-slide img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  max-width: 600px; // Large image for desktop
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  border-radius: 5px;
+}
+
+.swiper-slide-active img {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.swiper-slide:not(.swiper-slide-active) img {
+  opacity: 0.5;
+  transform: scale(0.85); // Slightly smaller for inactive slides
+}
+
+// Navigation Arrows
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  color: $accentcolor2 !important;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: 0.3s ease-in-out;
+}
+
+.swiper-button-prev {
+  left: 10px;
+}
+
+.swiper-button-next {
+  right: 10px;
+}
+
+// Pagination Dots
+.swiper-pagination {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0.7;
+    transition: 0.3s ease-in-out;
+
+    &.swiper-pagination-bullet-active {
+      background: black;
+      opacity: 1;
+      transform: scale(1.2);
+    }
+  }
+}
+
+// 🔹 Mobile Styles
+@media (max-width: 768px) {
+  .swiper {
+    width: 95%;
+  }
+
+  .swiper-slide img {
+    max-width: 300px; // Smaller size for mobile
+    transform: scale(0.9);
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 20px;
+    height: 20px;
+    font-size: 2rem;
+  }
+}

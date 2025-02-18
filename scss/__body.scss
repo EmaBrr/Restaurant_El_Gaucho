@@ -1,0 +1,134 @@
+html {
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+  
+  body {
+    margin: 0;
+    color: $white;
+    overflow-x: hidden;
+    min-height: 460px;
+  }
+  
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    display: none;
+  }
+  
+  main {
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+  }
+  
+  header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: transparent;
+    text-align: center;
+  }
+  
+  .section-name {
+    font-size: 2.5rem;
+    font-family: $font_1;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    padding: 50px 0px;
+    color: $accentcolor2;
+    text-shadow: -1px -1px 0 $accentcolor3, 1px -1px 0 $accentcolor3,
+      -1px 1px 0 $accentcolor3, 1px 1px 0 $accentcolor3;
+    text-align: center;
+  
+    @media screen and (max-width: $xxxl) {
+      font-size: 2.5rem;
+    }
+  
+    @media screen and (max-width: $xxl) {
+      font-size: 2.5rem;
+    }
+  
+    @media screen and (max-width: $xl) {
+      font-size: 2.2rem;
+      padding: 30px 0px;
+    }
+  
+    @media screen and (max-width: $l2) {
+      font-size: 2rem;
+      padding: 30px 0px;
+    }
+  
+    @media screen and (max-width: $l) {
+      font-size: 1.8rem;
+      padding: 30px 0px;
+    }
+  
+    @media screen and (max-width: $m) {
+      font-size: 1.6rem;
+      padding: 30px 0px;
+    }
+  
+    @media screen and (max-width: $s2) {
+      font-size: 1.4rem;
+      padding: 30px 0px;
+    }
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0);
+    z-index: 1;
+    transition: background 0.5s ease-in-out;
+  }
+  
+  .section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    // justify-content: space-between;
+    justify-content: center;
+    justify-items: center;
+    padding: 20px;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    background: none !important;
+    color: white;
+    height: auto;
+    // padding-bottom: 200px;
+    height: 100vh;
+  
+    @media screen and (max-width: $m) {
+      padding: 50px 15px 15px 15px;
+    }
+  
+    .section-container {
+      width: 80%;
+      max-width: 1500px;
+      background-color: $accentcolor4;
+      opacity: 0.9;
+      border-radius: 5px;
+      padding-bottom: 50px;
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.25),
+        0 6px 12px rgba(0, 0, 0, 0.2);
+  
+      @media screen and (max-width: $xxl) {
+        width: 90%;
+        padding-bottom: 30px;
+      }
+  
+      @media screen and (max-width: $l2) {
+        padding-bottom: 0px;
+      }
+  
+      @media screen and (max-width: $m) {
+        width: 100%;
+      }
+    }
+  }
+  
