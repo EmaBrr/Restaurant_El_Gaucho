@@ -1,114 +1,91 @@
-.swiper {
+// .swiper {
+//   width: 100%;
+//   height: auto;
+//   padding: 20px 0;
+// }
+
+// .swiper-wrapper {
+//   display: flex;
+//   align-items: center;
+// }
+
+// .swiper-slide {
+//   text-align: center;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .swiper-slide img {
+//   width: 100%;
+//   height: auto;
+//   object-fit: cover;
+//   max-width: 100%;
+//   border-radius: 10px; /* Optional: For rounded corners */
+// }
+
+// /* Optional: Adjust button colors */
+// .swiper-button-prev, .swiper-button-next {
+//   color: white;
+// }
+
+/* Ensure the section is positioned correctly */
+.gallery {
   position: relative;
-  width: 90%;
-  max-width: 800px; // Adjust width for larger screens
-  margin: 0 auto;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-items: center;
-
 }
 
-.swiper-wrapper {
-  display: flex;
-  align-items: center;
-  justify-items: center;
-  padding-bottom: 30px;
+/* Make sure Swiper fits well */
+.swiper {
+  width: 100%;
+  height: auto;
+  padding-bottom: 60px; /* Extra space for pagination */
 }
 
-.swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-items: center;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
+/* Keep images centered and not stretched */
 .swiper-slide img {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-items: center;
-  max-width: 600px; // Large image for desktop
   height: auto;
-  border-radius: 5px;
   object-fit: cover;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  border-radius: 5px;
+  max-width: 100%;
+  border-radius: 10px; /* Optional for style */
 }
 
-.swiper-slide-active img {
-  transform: scale(1);
-  opacity: 1;
-}
-
-.swiper-slide:not(.swiper-slide-active) img {
-  opacity: 0.5;
-  transform: scale(0.85); // Slightly smaller for inactive slides
-}
-
-// Navigation Arrows
-.swiper-button-next,
-.swiper-button-prev {
-  position: absolute;
-  color: $accentcolor2 !important;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 10;
-  transition: 0.3s ease-in-out;
-}
-
-.swiper-button-prev {
-  left: 10px;
-}
-
+/* Move arrows outside the photos */
+.swiper-button-prev, 
 .swiper-button-next {
-  right: 10px;
+  color: red; /* Adjust color */
+  position: absolute;
+  top: 70%;
+  // transform: translateY(-10%);
+  z-index: 10;
+  width: 20px !important;
+  height: 20px !important;
+  font-size: 10px !important;
+  color: $accentcolor2 !important; 
 }
 
-// Pagination Dots
+.swiper-button-prev::after, 
+.swiper-button-next::after {
+    font-size: 30px !important; /* Default is ~44px, make it smaller */
+}
+
+// /* Move left arrow outside */
+// .swiper-button-prev {
+//   left: -50px; /* Moves it further left */
+// }
+
+// /* Move right arrow outside */
+// .swiper-button-next {
+//   right: -50px; /* Moves it further right */
+// }
+
+/* Adjust pagination bubbles to be further below */
 .swiper-pagination {
   position: absolute;
-  bottom: -20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
-
-  .swiper-pagination-bullet {
-    width: 12px;
-    height: 12px;
-    background: rgba(0, 0, 0, 0.5);
-    opacity: 0.7;
-    transition: 0.3s ease-in-out;
-
-    &.swiper-pagination-bullet-active {
-      background: black;
-      opacity: 1;
-      transform: scale(1.2);
-    }
-  }
+  bottom: -30px; /* Moves dots down */
 }
 
-// 🔹 Mobile Styles
-@media (max-width: 768px) {
-  .swiper {
-    width: 95%;
-  }
-
-  .swiper-slide img {
-    max-width: 300px; // Smaller size for mobile
-    transform: scale(0.9);
-  }
-
-  .swiper-button-next,
-  .swiper-button-prev {
-    width: 20px;
-    height: 20px;
-    font-size: 2rem;
-  }
+.swiper-pagination-bullet-active {
+  background-color: $accentcolor2 !important;
 }
+
