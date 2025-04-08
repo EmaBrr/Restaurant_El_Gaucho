@@ -634,7 +634,7 @@ header {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 8px;
-  padding-bottom: 50px;
+  padding-bottom: 40px;
   color: #debe4e;
   text-shadow: -1px -1px 0 #5c4033, 1px -1px 0 #5c4033, -1px 1px 0 #5c4033, 1px 1px 0 #5c4033;
   text-align: center;
@@ -865,6 +865,7 @@ header {
 /* Ensure the section is positioned correctly */
 .gallery {
   position: relative;
+  height: 100vh;
 }
 
 /* Make sure Swiper fits well */
@@ -911,47 +912,221 @@ header {
   background-color: #debe4e !important;
 }
 
-footer {
+.contacts {
   position: relative;
-  z-index: 999;
-  background-color: black;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  padding: 50px 0px;
-  text-align: center;
-  font-family: "Poppins", serif;
+  height: 100vh;
 }
 
-.footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
+.contact-content {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  position: relative;
 }
 
-.footer-info {
+.contact-details {
+  flex: 1 1 250px;
+  justify-content: right;
   display: flex;
   flex-direction: column;
+  align-items: right;
+  padding-top: 20px;
+}
+@media screen and (max-width: 1600px) {
+  .contact-details {
+    padding-top: 0px;
+  }
 }
 
-.footer-logo img {
-  width: 150px;
+.contact-map {
+  flex: 2 2 300px;
 }
 
-.footer-social a {
-  margin: 0 10px;
+.contact-details p {
+  width: 100%;
+  font-family: "Poppins", serif;
+  font-weight: 300;
+  letter-spacing: 2px;
+  line-height: 30px;
+  text-align: right;
+  font-size: 1.3rem;
+  color: #f9efe0;
+}
+@media screen and (max-width: 1600px) {
+  .contact-details p {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 1094px) {
+  .contact-details p {
+    font-size: 1rem;
+    line-height: 25px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 850px) {
+  .contact-details p {
+    text-align: center;
+    font-size: 1.1rem;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .contact-details p {
+    font-size: 0.9rem;
+    text-align: center;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 490px) {
+  .contact-details p {
+    font-size: 0.8rem;
+    line-height: 20px;
+    width: 100%;
+  }
 }
 
-.footer-social img {
-  width: 30px;
+.contact-details a {
+  color: #f9efe0; /* or your brand color */
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.footer-contact p {
-  margin: 5px 0;
+.contact-details a:hover {
+  text-decoration: underline;
 }
 
-.footer-bottom {
-  margin-top: 20px;
+.contact-map iframe {
+  width: 100%;
+  border-radius: 8px;
+}
+
+i {
+  display: flex;
+  justify-items: right;
+  align-items: right;
+  right: 0;
+}
+
+.contact-social {
+  display: flex;
+  justify-content: right;
+  align-items: right;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+@media screen and (max-width: 1600px) {
+  .contact-social {
+    margin-top: 0rem;
+  }
+}
+.contact-social p {
+  display: inline-block;
+}
+.contact-social .social-icons {
+  display: flex;
+  justify-content: right;
+  align-items: right;
+}
+@media screen and (max-width: 850px) {
+  .contact-social .social-icons {
+    justify-content: center;
+    align-items: center;
+  }
+}
+.contact-social .social-icons a {
+  color: #f9efe0;
+  font-size: 30px;
+  padding: 0px 10px;
+}
+@media screen and (max-width: 850px) {
+  .contact-social .social-icons a {
+    font-size: 20px;
+  }
+}
+
+footer {
+  color: #f9efe0;
+  padding: 2rem 1rem;
+  z-index: 1000;
+  position: relative;
+  display: block;
+}
+@media screen and (max-width: 850px) {
+  footer {
+    margin-top: 200px;
+  }
+}
+footer .footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+footer .footer-content .footer-logo img {
+  width: 120px;
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+footer .footer-content .footer-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+footer .footer-content .footer-info .footer-social p,
+footer .footer-content .footer-info .footer-contact p {
+  margin: 0.2rem 0;
+}
+footer .footer-content .footer-info .footer-icons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+footer .footer-content .footer-info .footer-icons a {
+  color: #f9efe0;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+footer .footer-content .footer-info .footer-icons a:hover {
+  color: #f9efe0;
+}
+footer .footer-content .footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 1rem;
+  font-size: 0.9rem;
+  text-align: center;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  footer .footer-info {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: center;
+    width: 100%;
+  }
+  footer .footer-info .footer-social,
+  footer .footer-info .footer-contact {
+    flex: 1;
+  }
+  footer .footer-info .footer-social {
+    align-items: flex-start;
+  }
+  footer .footer-info .footer-contact {
+    align-items: flex-end;
+    text-align: center;
+  }
+}
+
+p {
+  font-family: "Poppins", serif;
+  padding: 5px 0px;
+}
+
+a {
+  color: #f9efe0;
 }

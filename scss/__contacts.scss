@@ -1,0 +1,130 @@
+.contacts {
+  position: relative;
+  height: 100vh;
+//   display: block;
+}
+
+.contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  //   align-items: center;
+  gap: 2rem;
+  position: relative;
+  //   height: 100vh;
+  // margin-top: 2rem;
+}
+
+.contact-details {
+  flex: 1 1 250px;
+  justify-content: right;
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+  padding-top: 20px;
+
+  @media screen and (max-width: $xxxl) {
+    padding-top: 0px;
+  }
+}
+
+.contact-map {
+  flex: 2 2 300px;
+}
+
+.contact-details p {
+  width: 100%;
+  font-family: $font_2;
+  font-weight: 300;
+  letter-spacing: 2px;
+  line-height: 30px;
+  text-align: right;
+  font-size: 1.3rem;
+  color: $white;
+
+  @media screen and (max-width: $xxxl) {
+    font-size: 1.2rem;
+  }
+
+  @media screen and (max-width: $xl) {
+    font-size: 1rem;
+    line-height: 25px;
+    width: 100%;
+  }
+
+  @media screen and (max-width: $l2) {
+    text-align: center;
+    font-size: 1.1rem;
+    // width: 75%;
+    width: 100%;
+  }
+
+  @media screen and (max-width: $m) {
+    font-size: 0.9rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  @media screen and (max-width: $s2) {
+    font-size: 0.8rem;
+    line-height: 20px;
+    width: 100%;
+  }
+}
+
+.contact-details a {
+  color: $white; /* or your brand color */
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.contact-details a:hover {
+  text-decoration: underline;
+}
+
+.contact-map iframe {
+  width: 100%;
+  border-radius: 8px;
+}
+
+i {
+  display: flex;
+  justify-items: right;
+  align-items: right;
+  right: 0;
+}
+
+.contact-social {
+  display: flex;
+  justify-content: right;
+  align-items: right;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+  @media screen and (max-width: $xxxl) {
+    margin-top: 0rem;
+  }
+
+  p {
+    display: inline-block;
+  }
+  .social-icons {
+    display: flex;
+    justify-content: right;
+    align-items: right;
+
+    @media screen and (max-width: $l2) {
+      justify-content: center;
+      align-items: center;
+    }
+
+    a {
+      color: $white;
+      font-size: 30px;
+      padding: 0px 10px;
+
+      @media screen and (max-width: $l2) {
+        font-size: 20px;
+      }
+    }
+  }
+}
